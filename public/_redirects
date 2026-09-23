@@ -1,0 +1,3 @@
+# Netlify redirects for ASTRA-TWIN
+/api/*  /.netlify/functions/api/:splat  200
+/*      /index.html                     200

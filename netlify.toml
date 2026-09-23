@@ -1,0 +1,24 @@
+# Netlify Configuration for ASTRA-TWIN Spacecraft Digital Twin
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Proxy all API requests to the Netlify serverless function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+# Client-side SPA routing fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

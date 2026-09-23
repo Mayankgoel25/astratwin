@@ -1,0 +1,6 @@
+{
+  "name": "ASTRA-TWIN | Spacecraft Digital Twin & Predictive Health",
+  "description": "AI-powered spacecraft digital twin platform for real-time telemetry, predictive failure intelligence, explainable anomaly detection, and what-if mission simulation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
